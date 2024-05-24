@@ -1,0 +1,157 @@
+@charset "utf-8";
+/* CSS Document */
+
+.wrap{ position: relative; height: 100%;}
+.page_wrap{ padding: 32px 20px 0;}
+
+
+/*====================로딩 페이지====================*/
+.loading_wrap{ height: 100vh; padding: 4rem; background-color: #5399FF;}
+.loading_wrap .title_wrap{ position: relative; padding-left: 46px;}
+.loading_wrap .title_wrap::before{ position: absolute; left: 0; top: 2px; content: ""; display: block; clear: both; width: 2rem; height: 2rem; border-radius: 50%; background-color: #fff;}
+.loading_wrap .title_wrap >p{color: #fff;}
+.loading_wrap .title_wrap >p:first-child{ font-weight: 200;}
+.loading_wrap .title_wrap >p:last-child{ font-size: 44px; line-height: 52px; font-weight: 700;}
+.loading_wrap .cont_wrap{ position: fixed; top: 50%; left: 50%; transform: translate(-50%,-35%);}
+.loading_wrap .cont_wrap .visual_wrap{ position: relative;}
+.loading_wrap .cont_wrap .visual_wrap span{ position: absolute; display: block; border-radius: 50%; background-color: rgba(255,255,255,.2);}
+.loading_wrap .cont_wrap .visual_wrap .bubble01{ animation:ani01 2s ease-in-out infinite alternate; top: -20px; left: 30px; width: 20px; height: 20px;}
+.loading_wrap .cont_wrap .visual_wrap .bubble02{ animation:ani02 3s ease-in-out infinite alternate; top: -80px; right: 60px; width: 50px; height: 50px;}
+.loading_wrap .cont_wrap .visual_wrap .bubble03{ animation:ani01 3s ease-in-out infinite alternate; top: -10px; right: 30px; width: 28px; height: 28px;}
+
+.loading_wrap .cont_wrap .start_button{ margin-top: 30px; display: flex; align-items: center; justify-content: center; cursor: pointer;}
+.loading_wrap .cont_wrap .start_button p{ margin-right: 8px; color: #fff;}
+.loading_wrap .cont_wrap .start_button span{ margin-top: 1px; width: 20px; height: 20px; background-image:url(../images/icon_arrow_circle_next.svg); background-repeat: no-repeat; background-size: 20px auto;}
+
+
+
+/*====================메인 페이지====================*/
+.main_wrap .page_cont_top{ margin-bottom: 24px; padding: 32px 20px 0;}
+.main_wrap .main_info_wrap{ margin-bottom: 32px;}
+.main_wrap .main_info_wrap .main_icon{ margin-bottom: 10px; display: flex; justify-content: center;}
+.main_wrap .graph_explain_wrap{margin-bottom: 12px;}
+.main_wrap .notice_wrap{}
+.main_wrap .notice_wrap .notice_box{ margin-bottom: 16px; display: flex; align-items: center; padding: 24px 20px 24px 20px; border-radius: 16px; background-color: #fff; box-shadow:0 6px 16px rgba(0,0,0,.2);}
+.main_wrap .notice_wrap .notice_box:before{ margin-right: 8px; content: ""; display: inline-block; clear: both; width: 24px; height: 24px; background: url(../images/icon_notice.svg) no-repeat;}
+.main_wrap .notice_wrap .notice_box > p{ display: none; font-size: 14px;}
+.main_wrap .notice_wrap .notice_box > p > span{ margin-left: 2px; font-size: 15px; font-weight: 600;}
+.main_wrap .notice_wrap .notice_box .display{ display: block;}
+.main_wrap .notice_wrap .toggle_wrap{ display: flex; justify-content: flex-end; align-items: center;}
+.main_wrap .notice_wrap .toggle_wrap > p{ margin-right: 6px; font-size: 12px; color: #5a5a5a;}
+.main_wrap .notice_wrap .toggle_wrap > p > span{ font-weight: 600;}
+.main_wrap .notice_wrap .toggle_wrap .button_toggle{ position: relative; width: 46px; height: 26px; text-indent: -9999px; border: 2px solid #eee; border-radius: 100px; cursor: pointer;}
+.main_wrap .notice_wrap .toggle_wrap .button_toggle::after{ transition: all .4s ease ; position: absolute; top: 2px; left: 3px; content: ""; clear: both; display: block; width: 18px; height: 18px; border-radius: 50%; background-color: #eee;}
+
+.main_wrap .notice_wrap .toggle_wrap .button_toggle.on{border: 2px solid #5399FF;}
+.main_wrap .notice_wrap .toggle_wrap .button_toggle.on::after{  transform: translateX(18px); background-color: #5399FF;}
+
+
+.main_wrap .devide_line{ width: 100%; height: 10px; background-color: #F7F9FB;}
+.main_wrap .page_cont_bottom{ padding: 32px 20px;}
+
+
+/*=================가계부 작성 페이지=================*/
+.write_account_wrap .button_wrap{ padding-bottom: 20px;}
+
+/*================카테고리 수정 페이지================*/
+.modify_category_wrap{}
+.modify_category_wrap >div{ margin-bottom: 16px;}
+.modify_category_wrap .button_wrap{ margin: 50px 0 30px 0;}
+
+
+
+/*===================월간소비 페이지===================*/
+.month_wrap{ padding-bottom: 60px;}
+.month_wrap > h2{ font-weight: 300; margin-bottom: 40px;}
+.month_wrap .years_select_wrap{ margin-bottom: 40px;}
+.month_wrap .years_select_wrap > p{ width: 24px; height: 24px; text-indent: -9999px; background-repeat: no-repeat; background-size: 24px auto; opacity: .3;}
+.month_wrap .years_select_wrap > p.on{opacity: 1;}
+.month_wrap .months_list_wrap{ flex-wrap: wrap;}
+.month_wrap .months_list_wrap .item{ width: 31%; margin: 24px 1%; box-sizing: border-box;}
+.month_wrap .months_list_wrap .item .state_icon_wrap{ margin-bottom: 12px;}
+.month_wrap .months_list_wrap .item .state_icon_wrap > div{ height: 140px; display: none;}
+.month_wrap .months_list_wrap .item .state_icon_wrap > div.on{ display: flex;}
+.month_wrap .months_list_wrap .item .state_icon_wrap .state_dim{ margin: 0 auto; justify-content: center; width: 86%; background-color: #fcfcfc; border: 2px dashed #eee; border-radius: 16px; cursor: pointer;}
+.month_wrap .months_list_wrap .item .state_icon_wrap .state_dim > img{ opacity: .6;}
+.month_wrap .months_list_wrap .item .state_icon_wrap .state_dim > p{ margin-top: 8px; font-size: 13px; text-align: center; color: #5a5a5a;}
+.month_wrap .months_list_wrap .item .text_wrap{ padding-left: 8px;}
+.month_wrap .months_list_wrap .item .text_wrap .month{ font-size: 13px;}
+.month_wrap .months_list_wrap .item .text_wrap .month span{ margin-right: 1px; font-size: 14px; font-weight: 600;}
+.month_wrap .months_list_wrap .item .text_wrap .price{ font-size: 14px;}
+.month_wrap .months_list_wrap .item .text_wrap .price span{ margin-right: 1px; font-size: 15px; font-weight: 600;}
+
+/*===================설정 페이지===================*/
+.setting_wrap{}
+.setting_wrap .set_bg{ z-index: -2; position: absolute; top: -80px; right: -90px; width: 240px; height: 240px; background: url(../images/img_bg_setting.svg) no-repeat; background-size: contain;}
+.setting_wrap > h2{ font-weight: 300; margin-bottom: 100px;}
+.setting_wrap .set_button_wrap{ display: flex; flex-wrap: wrap;}
+.setting_wrap .set_button_wrap .sb_box{ margin: 0 4% 6% 0; padding: 50px 0 40px 0; display: flex; flex-direction: column; align-items: center; width: 48%; box-sizing: border-box; border-radius: 16px; cursor: pointer; background-color:#fff; box-shadow:0 6px 16px rgba(0,0,0,.2);}
+.setting_wrap .set_button_wrap .sb_box:nth-child(2n+0){ margin-right: 0;}
+.setting_wrap .set_button_wrap .sb_box .icon{ margin-bottom: 24px; width: 44px; height: 42px; background-repeat: no-repeat;}
+.setting_wrap .set_button_wrap .sb_box:nth-child(1) .icon{ background: url(../images/icon_set_goal.svg);}
+.setting_wrap .set_button_wrap .sb_box:nth-child(2) .icon{ background: url(../images/icon_set_category.svg);}
+.setting_wrap .set_button_wrap .sb_box:nth-child(3) .icon{ background: url(../images/icon_set_notice.svg);}
+.setting_wrap .set_button_wrap .sb_box .txt{ text-align: center;}
+
+
+
+/*===================차트 페이지===================*/
+.chart_page_wrap{ padding-top: 8px; background-color: #f5f5f5;}
+.chart_page_wrap .chart_wrap{ margin: auto; width: 300px; height: auto;}
+.chart_page_wrap .chart_list_wrap{ margin-top: 50px; padding: 32px 20px 0; background-color: #fff; border-radius: 16px 16px 0 0;}
+.chart_page_wrap .chart_list_wrap .list{ margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #eee;}
+.chart_page_wrap .chart_list_wrap .list a{display: flex; justify-content: space-between; align-items: center;}
+.chart_page_wrap .chart_list_wrap .list .cont_left{ display: flex; font-weight: 600;}
+.chart_page_wrap .chart_list_wrap .list .cont_left .cate_name{ font-size: 15px; font-weight: 500;}
+.chart_page_wrap .chart_list_wrap .list .cont_left span{ margin-right: 8px; width: 36px; height: 22px; border-radius: 4px; background-color:#5399FF; font-size: 11px; font-weight: 500; color: #fff; line-height: 22px; text-align: center;}
+.chart_page_wrap .chart_list_wrap .list .cont_right.price{ font-size: 14px;}
+.chart_page_wrap .chart_list_wrap .list .cont_right.price span{ margin-right: 2px; font-size: 16px; font-weight: 600;}
+
+/*===================차트 디테일 페이지===================*/
+.chart_detail_wrap{ padding-top: 8px; background-color: #f5f5f5;}
+.chart_detail_wrap .page_title_wrap{margin-bottom: 18px;}
+
+.chart_detail_wrap .page_cont_top{ padding: 0 20px 0;}
+.chart_detail_wrap .page_cont_top .graph_wrap{ margin-bottom: 20px;}
+.chart_detail_wrap .page_cont_top .graph_wrap .graph_bar{ margin-bottom: 8px;}
+.chart_detail_wrap .page_cont_top .graph_wrap .graph_bar li{height: 24px;}
+.chart_detail_wrap .page_cont_top .graph_wrap .graph_bar .graph_left{ width: 80%; border-radius: 100px 0 0 100px;}
+.chart_detail_wrap .page_cont_top .graph_wrap .graph_bar .graph_right{ width: 20%; border-radius: 0 100px 100px 0; }
+
+.chart_detail_wrap .page_cont_top .graph_wrap .graph_percent li{font-size: 11px; font-weight: 600;}
+.chart_detail_wrap .page_cont_top .graph_wrap .graph_percent li p{ margin: 0 4px; width: 10px; height: 10px; border-radius: 50%;}
+
+.chart_detail_wrap .page_cont_bottom{ margin-top: 50px; padding: 32px 20px; background-color: #fff; border-radius: 16px 16px 0 0;}
+
+/*----고정지출/초과지출 display 공통 컴포넌트----*/
+.graph_explain_wrap{  padding: 24px 0; border-radius: 16px; background-color: #fff; box-shadow:0 6px 16px rgba(0,0,0,.2); cursor: pointer;}
+.graph_explain_wrap > div{ position: relative; width: 50%;}
+.graph_explain_wrap > div > p { margin-bottom: 4px; font-size: 14px; font-weight: 500;}
+.graph_explain_wrap > div > span{ font-weight: 600;} 
+.graph_explain_wrap .explain_left:after{ content: ''; clear: both; position: absolute; top: 0; right: 0; display: block; width: 1.5px; height: 52px; background-color: #eee;}
+.graph_explain_wrap .explain_right > span{ color: #E53E3E;}
+
+
+/*----가계부 리스트 공통 스타일----*/
+.account_component_wrap .account_tab_wrap{ margin-bottom: 32px; padding-bottom: 20px; width: 100%; display: flex; align-items: center; border-bottom: 1px solid #eee;}
+.account_component_wrap .account_tab_wrap li{ margin-right: 16px; font-size: 16px; font-weight: 500; cursor: pointer; color: #9C9C9C; opacity: .6;}
+.account_component_wrap .account_tab_wrap li.active{ color: #3A3A3A; opacity: 1;}
+
+.account_component_wrap .account_list_wrap:not(:last-child){ margin-bottom: 46px;}
+.account_component_wrap .account_list_wrap .date_wrap{ margin-bottom: 20px; display: flex; align-items: center; }
+.account_component_wrap .account_list_wrap .date_wrap .date{ font-size: 15px; font-weight: 500;}
+.account_component_wrap .account_list_wrap .date_wrap .date span{ font-size: 16px; font-weight: 600;}
+.account_component_wrap .account_list_wrap .date_wrap .week{ margin-left: 6px; width: 42px; height: 22px; background-color: #ebebeb; border-radius: 2px; font-size: 13px; line-height: 22px; font-weight: 500; text-align: center;}
+
+.account_component_wrap .account_list_wrap .account_item_wrap{}
+.account_component_wrap .account_list_wrap .account_item_wrap .item_list{ display: flex; align-items: flex-start;}
+.account_component_wrap .account_list_wrap .account_item_wrap .item_list:not(:last-child){ margin-bottom: 20px;}
+.account_component_wrap .account_list_wrap .account_item_wrap .item_list .category_name{ width: 18%; margin-right: 2%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; font-weight: 500;}
+.account_component_wrap .account_list_wrap .account_item_wrap .item_list .item_name_wrap{ width: 56%;}
+.account_component_wrap .account_list_wrap .account_item_wrap .item_list .item_name_wrap .item_name{ margin-bottom: 4px; font-size: 14px; font-weight: 500;}
+.account_component_wrap .account_list_wrap .account_item_wrap .item_list .item_name_wrap .item_explain_wrap{ display: flex;}
+.account_component_wrap .account_list_wrap .account_item_wrap .item_list .item_name_wrap .item_explain_wrap .payment{ margin-right: 6px; font-size: 11px;  color: #5a5a5a;}
+.account_component_wrap .account_list_wrap .account_item_wrap .item_list .item_name_wrap .item_explain_wrap .payment:after{ margin-left: 6px; vertical-align: middle; display: inline-block; content: ""; clear: both; width: 2px; height: 2px; border-radius: 50%; background-color: #5a5a5a;}
+.account_component_wrap .account_list_wrap .account_item_wrap .item_list .item_name_wrap .item_explain_wrap .over{ font-size: 11px; color: #5a5a5a;}
+.account_component_wrap .account_list_wrap .account_item_wrap .item_list .price{ width: 24%; font-size: 13px; text-align: right; font-weight: 500; }
+.account_component_wrap .account_list_wrap .account_item_wrap .item_list .price span{ margin-right: 2px; font-size: 15px; font-weight: 600;}
